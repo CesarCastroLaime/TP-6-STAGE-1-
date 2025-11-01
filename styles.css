@@ -1,0 +1,98 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.ejercicio {
+  margin-bottom: 40px;
+}
+
+div {
+  padding: 10px;
+  background: #cce5ff;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* Ejercicio 1 - Flex  */
+.flex-basico {
+  display: flex; 
+  border: 5px solid rgb(55, 0, 255);
+}
+
+/* Ejercicio 2 - Dirección y Envoltura */
+.flex-direccion-wrap {
+  display: flex;
+  flex-direction: row; /* Cambiar a column, row-reverse, etc. para probar */
+  flex-wrap: wrap; /* Permite que los elementos pasen a otra fila */
+  border: 5px solid green;
+}
+
+/* Ejercicio 3 - Alineación y Justificación */
+.flex-alineacion {
+  display: flex;
+  justify-content: space-around; /* Espacio en el eje principal */
+  align-items: center;           /* Alineación en el eje transversal */
+  align-content: center;         /* En caso de múltiples filas */
+  height: 200px;
+  flex-wrap: wrap;
+  border: 5px solid red;
+}
+
+/* Ejercicio 4 - Orden y Flex individual */
+.flex-orden {
+  display: flex;
+  border: 5px solid purple;
+}
+
+.item1 {
+  order: 3; /* Va al final */
+  flex: 1;  /* Crece igual que los demás */
+}
+
+.item2 {
+  order: 1; /* Va primero */
+  flex-grow: 2; /* Crece el doble */
+  align-self: flex-start; /* Alineación individual */
+}
+
+.item3 {
+  order: 2; /* Va segundo */
+  flex-basis: 100px; /* Tamaño base */
+}
+
+/* Ejercicio 5 - Layout Completo */
+.layout {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+
+.layout header,
+.layout footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.layout main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.layout aside {
+  background: #ffc;
+  flex: 1;
+  min-width: 150px;
+  padding: 15px;
+}
+
+.layout .contenido {
+  background: #eef;
+  flex: 3;
+  min-width: 250px;
+  padding: 15px;
+}
